@@ -1,0 +1,42 @@
+body{
+    height: 100vh;
+}
+.container{
+    max-width: 955px;
+    margin: auto;
+    background-color: burlywood;
+    height: 80vh;
+    overflow-y: scroll;
+}
+#chatform{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+.chat-messages{
+    color: white;
+}
+.center{
+    color: red;
+    
+    margin:auto;
+    text-align: center;
+    clear: both;
+}
+.chat{
+    margin-bottom: 10px;
+    padding-left: 10px;
+    background-color: black;
+    border: aqua 2px solid;
+    border-radius: 5px;
+    width: 24%;
+    font-size: small;
+}
+.left{
+    float: left;
+    clear: both;
+}
+.right{
+    float: right;
+    clear: both;
+}

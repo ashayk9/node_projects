@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ultimate Frisbee - Home</title>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">YelpCamp</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <% if(!currentUser){ %>
+                        <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/register">Signup</a></li>
+                    <% }else{ %>
+                        <li class="nav-item"><a class="nav-link" href="">logged in as <%= currentUser.username %></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    <% } %>
+                    
+                </ul>
+    
+            </div>
+    
+        </div>
+    </nav>
+    <div><p></p></div>
+
+    <div class="container">
+        <% if(error && error.length>0){ %>
+        <div class="alert alert-danger text-center" role="alert">
+            <%= error %>
+        </div>
+        <% }  %>
+        <% if(success && success.length>0){ %>
+        <div class="alert alert-success text-center" role="alert">
+            <%= success %>
+        </div>
+        <% } %>
+    </div>
+    
+    
+    
+       
+    
+
+
+
+
+

@@ -1,0 +1,16 @@
+<%- include("../partials/header")%>
+<div class="container">
+    <h1>Edit campground form</h1>
+
+    <form action="/campgrounds/<%= selected_camp.id %>/?_method=PUT" method="POST">
+        
+        <input type="text" name="camp[name]" value="<%= selected_camp.name %>">
+        <input type="text" name="camp[img]" value="<%= selected_camp.img %>">
+        <input type="text" name="camp[description]" value="<%= selected_camp.description %>">
+        <input class="btn btn-default btn-primary" type="submit">
+    </form>
+
+    <a href="/campgrounds">Go Back</a>
+</div>
+
+<%- include("../partials/footer")%>

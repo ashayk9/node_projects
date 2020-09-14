@@ -1,0 +1,17 @@
+.text{
+    font-size: small;
+}
+.card{
+    margin-top: 20px;
+    padding: 5px;
+}
+.grey{
+    background-color: rgba(255, 255, 255, 0.408);
+}
+.align{
+    display: flex;
+    
+}
+.btn{
+    margin-right:10px ;
+}
